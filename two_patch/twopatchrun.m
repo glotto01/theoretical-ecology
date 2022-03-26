@@ -29,7 +29,7 @@ for m=1:n
       l0=length(u0);
       l1=length(u1);
       l=max(l0,l1);
-      diff=max([u0,zeros(1,l-l0)]-[u1,zeros(1,l-l1)]);
+      diff=max(abs([u0,zeros(1,l-l0)]-[u1,zeros(1,l-l1)]));
       u0=u1;
   end
   pop=sum(u0)*delta*2;
